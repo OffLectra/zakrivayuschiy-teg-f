@@ -250,20 +250,6 @@
   }
 }
 
-/* Решение проблемы не отображения в CHROME  */
-@supports (-webkit-appearance: none) {
-  .save_post-button-img {
-    filter: invert(100%);
-    -webkit-filter: invert(100%);
-  }
-}
-
-@supports (-moz-appearance: none) {
-  .save_post-button-img {
-    filter: invert(0%);
-  }
-}
-
 .save_post-button {
   position: relative;
   margin: 0 auto;
