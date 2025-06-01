@@ -139,12 +139,9 @@
 }
 
 /* Поддержка text-stroke */
-@supports (
-  (text-stroke: 0.5px #000000) or (-webkit-text-stroke: 0.5px #000000)
-) {
+@supports ((-webkit-text-stroke: 0.5px #000000)) {
   [class*="watermark"]::after {
     -webkit-text-stroke: 0.5px #ffffff;
-    text-stroke: 0.5px #ffffff;
   }
 }
 
@@ -328,6 +325,7 @@
   width: clamp(257px, 100%, 293px);
   height: 38px;
   text-transform: uppercase;
+  background-color: #fff;
 }
 
 .like-icon-stars {
