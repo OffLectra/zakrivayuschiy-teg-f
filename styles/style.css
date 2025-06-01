@@ -139,9 +139,12 @@
 }
 
 /* Поддержка text-stroke */
-@supports ((-webkit-text-stroke: 0.5px #000000)) {
+@supports (
+  (text-stroke: 0.5px #000000) or (-webkit-text-stroke: 0.5px #000000)
+) {
   [class*="watermark"]::after {
     -webkit-text-stroke: 0.5px #ffffff;
+    text-stroke: 0.5px #ffffff;
   }
 }
 
