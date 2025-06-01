@@ -91,7 +91,7 @@
 
 .button_animation {
   position: relative;
-  font-family: var(--accent-font-name, "PressStart2P"), sans-serif;
+  font-family: var(--accent-font-name, "PressStart2P"), fantasy;
   font-size: 14px;
   border: 2px solid #000;
   transition: box-shadow 0.3s ease;
