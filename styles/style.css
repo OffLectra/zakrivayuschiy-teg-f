@@ -105,6 +105,7 @@
 
 .image_container {
   width: 100%;
+  position: relative;
   margin: 0 auto;
   border: 1px solid var(--color-border);
 }
@@ -118,7 +119,37 @@
   position: relative;
 }
 
-/* Позиционирование и стили для ::after */
+.watermark {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font, 'PressStart2P'), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-shadow: 0 0 1px #fff;
+  mix-blend-mode: hard-light;
+  opacity: 0.4;
+}
+
+
+@media (max-width: 375px) {
+  .watermark {
+    top: 23px;
+    right: 10px;
+  }
+}
+
+@supports ((text-stroke: 1px #fff) or 
+  (-webkit-text-stroke: 1px #fff)) {
+  .watermark {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+    text-shadow: none;
+  }
+}
+/* 
+
+
 [class*="watermark"]::after {
   content: "";
   font-family: var(--accent-font-name, "PressStart2P"), fantasy;
@@ -138,7 +169,6 @@
   }
 }
 
-/* Поддержка text-stroke */
 @supports (
   (text-stroke: 0.5px #000000) or (-webkit-text-stroke: 0.5px #000000)
 ) {
@@ -146,8 +176,8 @@
     -webkit-text-stroke: 0.5px #ffffff;
     text-stroke: 0.5px #ffffff;
   }
-}
-
+} */
+/* 
 .watermark_one::after {
   content: "</скоро поедем>";
 }
@@ -171,7 +201,7 @@
 }
 .watermark_eight::after {
   content: "<точно научилась>";
-}
+} */
 
 .card_image {
   width: 100%;
