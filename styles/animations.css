@@ -9,3 +9,117 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+@keyframes blink {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes appearStars {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.like-icon-line {
+  transition: fill 0.1s linear;
+}
+
+/* Hover */
+.like-icon-blink {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon:hover .like-icon-blink {
+  fill: var(--heart-default-color, #000);
+  transition: fill 0.3s linear;
+}
+
+.like-icon-fill {
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .like-icon-fill {
+  fill: var(--color-like-icon-default, #000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Active  */
+.like-icon:active .like-icon-blink {
+  fill: var(--color-like-icon-liked, #ff0000);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .like-icon-fill {
+  fill: var(--color-like-icon-liked, #ff0000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Is-liked */
+.like-icon.is-liked .like-icon-blink {
+  fill: var(--color-like-icon-liked, #ff0000);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .like-icon-fill {
+  fill: var(--color-like-icon-liked, #ff0000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .like-icon-line {
+  fill: var(--color-like-icon-liked, #ff0000);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .like-icon-body {
+  transform-origin: center;
+  animation: blink 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .like-icon-stars {
+  animation: appearStars 0.3s ease-in 0.3s;
+}
+
+.button_animation {
+  position: relative;
+  font-family: var(--accent-font-name, "PressStart2P"), sans-serif;
+  font-size: 14px;
+  border: 2px solid #000;
+  transition: box-shadow 0.3s ease;
+  clip-path: inset(0 0 0 0);
+  cursor: pointer;
+}
+
+.button_animation::before {
+  content: "";
+  display: block;
+  top: 0;
+  right: 100%;
+  position: absolute;
+  background-color: #000;
+  block-size: 100%;
+  inline-size: 100%;
+  transition: right 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.button_animation:hover::before {
+  right: 0%;
+}
+
+.button_animation:focus {
+  outline: none;
+}
+
+.button_animation:focus-visible {
+  box-shadow: 2px 2px 0 var(--color-border, #000);
+}

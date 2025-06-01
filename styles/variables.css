@@ -1,7 +1,31 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
-:root{
-  --main-font: 'Inter';
-  --accent-font: 'PressStart2P';
+:root {
+  --main-font-name: "Inter";
+  --accent-font-name: "PressStart2P";
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
 
+  --background-color-element: #fff;
+  --color-border: #000;
+
+  --color-like-icon-default: #000;
+  --color-like-icon-line: #000;
+  --color-like-icon-liked: red;
+
+  --background-gradient: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #d3d3d3 0px,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(180deg, #e7e7e7, #1a1a1a);
 }
