@@ -406,7 +406,9 @@
                   alt="совет голубей"
                   class="card_image filter-blur-5"
                 />
-                <figcaption class="watermark">&lt;пора успокоиться&gt;</figcaption>
+                <figcaption class="watermark">
+                  &lt;пора успокоиться&gt;
+                </figcaption>
               </figure>
               <div class="card_descr">
                 <p>
@@ -468,7 +470,9 @@
                   alt="мемность"
                   class="card_image filters-drop-shadow-and-contrast"
                 />
-                <figcaption class="watermark">&lt;точно научилась&gt;</figcaption>
+                <figcaption class="watermark">
+                  &lt;точно научилась&gt;
+                </figcaption>
               </figure>
               <div class="card_descr">
                 <p>
@@ -534,12 +538,11 @@
           onclick="window['dialog-id'].showModal();"
           aria-controls="dialog-id"
           aria-label="Сохранить фото"
-          type="button"
         >
           <svg viewBox="0 0 40 40" fill="#fff" class="save_post-button-img">
             <use href="./svg/floppy.svg#floppy" />
           </svg>
-          <p class="button__text">Сохранить на память</p>
+          <span class="button__text">Сохранить на память</span>
         </button>
       </main>
       <dialog id="dialog-id" class="dialog">
@@ -560,7 +563,6 @@
           type="button"
           onclick="window['dialog-id'].close();"
           aria-label="Закрыть уведомление об отсутствии дискеты"
-          type="button"
         >
           <span class="button__text">ок</span>
         </button>

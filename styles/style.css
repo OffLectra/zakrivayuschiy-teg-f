@@ -123,14 +123,13 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: var(--accent-font, 'PressStart2P'), sans-serif;
+  font-family: var(--accent-font, "PressStart2P"), sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-shadow: 0 0 1px #fff;
   mix-blend-mode: hard-light;
   opacity: 0.4;
 }
-
 
 @media (max-width: 375px) {
   .watermark {
@@ -139,8 +138,7 @@
   }
 }
 
-@supports ((text-stroke: 1px #fff) or 
-  (-webkit-text-stroke: 1px #fff)) {
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .watermark {
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #fff;
@@ -213,10 +211,10 @@
   border: 1px solid var(--color-border);
   padding: 25px;
   padding-right: 26px;
-  padding-bottom: 23px;
+  /* padding-bottom: 23px; */
   font-size: 18px;
   display: flex;
-  gap: 25px;
+  gap: 26px;
   flex-direction: column;
   line-height: 21px;
 }
@@ -225,7 +223,7 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 0px;
+  gap: 6px;
 }
 
 .card__like-button {
@@ -239,18 +237,19 @@
 }
 
 .card__icon-button {
-  width: 50px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
   border: 0px solid transparent;
   cursor: pointer;
+  padding: 0px;
 }
 
 .card__icon-button:focus {
-  outline: none;
+  outline-color: #000;
 }
 
 .button__text {
